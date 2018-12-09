@@ -1,0 +1,6 @@
+framework module Pods_RodeosCateringProjectTests {
+  umbrella header "Pods-RodeosCateringProjectTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
