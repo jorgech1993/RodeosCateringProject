@@ -8,6 +8,9 @@ target 'RodeosCateringProject' do
   # Pods for RodeosCateringProject
 
 pod 'Firebase'
+pod 'Firebase/Core'
+pod 'FirebaseUI/Auth'
+
 
   target 'RodeosCateringProjectTests' do
     inherit! :search_paths
