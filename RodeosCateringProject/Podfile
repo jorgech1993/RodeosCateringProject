@@ -10,7 +10,9 @@ target 'RodeosCateringProject' do
 pod 'Firebase'
 pod 'Firebase/Core'
 pod 'FirebaseUI/Auth'
-
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
+pod 'Firebase/Messaging'
 
   target 'RodeosCateringProjectTests' do
     inherit! :search_paths
