@@ -18,8 +18,9 @@ class ViewController: UIViewController
     
     
     @IBAction func place_order_pressed(_ sender: Any) {
-        performSegue(withIdentifier: "place_order", sender: self)
+        performSegue(withIdentifier: "place_order_slider", sender: self)
     }
+    
     
     override func viewDidLoad()
     {

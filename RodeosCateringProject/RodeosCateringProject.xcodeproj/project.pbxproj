@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A26673B21BDEA8E00C4AC28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A26673A21BDEA8E00C4AC28 /* GoogleService-Info.plist */; };
+		1A3FD95421BF543F0070A21B /* PlaceOrderSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FD95321BF543F0070A21B /* PlaceOrderSliderViewController.swift */; };
+		1A3FD95621BF5D120070A21B /* MeatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FD95521BF5D120070A21B /* MeatsTableViewController.swift */; };
 		1AD4A12221BD026E0028309B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD4A12121BD026E0028309B /* LoginViewController.swift */; };
+		1AFE036E21C0CF92003CB978 /* JuiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE036D21C0CF92003CB978 /* JuiceTableViewController.swift */; };
 		295FA96149E210DB1110DD5A /* Pods_RodeosCateringProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46233FCE00C76A58F9F3493 /* Pods_RodeosCateringProject.framework */; };
 		804F7138026F9E8382836E97 /* Pods_RodeosCateringProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F79BB67CE705231354128A /* Pods_RodeosCateringProjectTests.framework */; };
 		9515B1F8040B74AA14CBAAB4 /* Pods_RodeosCateringProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F0FF80168E7C3EEF7A71EE /* Pods_RodeosCateringProjectUITests.framework */; };
@@ -41,7 +43,10 @@
 
 /* Begin PBXFileReference section */
 		1A26673A21BDEA8E00C4AC28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A3FD95321BF543F0070A21B /* PlaceOrderSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderSliderViewController.swift; sourceTree = "<group>"; };
+		1A3FD95521BF5D120070A21B /* MeatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatsTableViewController.swift; sourceTree = "<group>"; };
 		1AD4A12121BD026E0028309B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1AFE036D21C0CF92003CB978 /* JuiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceTableViewController.swift; sourceTree = "<group>"; };
 		35A6C8D9D733341BF12AA545 /* Pods-RodeosCateringProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodeosCateringProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-RodeosCateringProject/Pods-RodeosCateringProject.release.xcconfig"; sourceTree = "<group>"; };
 		5B36409DE04BBFE0D93C388E /* Pods-RodeosCateringProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodeosCateringProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RodeosCateringProject/Pods-RodeosCateringProject.debug.xcconfig"; sourceTree = "<group>"; };
 		779861891F91E918235BEA68 /* Pods-RodeosCateringProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodeosCateringProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RodeosCateringProjectTests/Pods-RodeosCateringProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +149,9 @@
 		FB3017C421BCC34300C7BCF2 /* RodeosCateringProject */ = {
 			isa = PBXGroup;
 			children = (
+				1AFE036D21C0CF92003CB978 /* JuiceTableViewController.swift */,
+				1A3FD95521BF5D120070A21B /* MeatsTableViewController.swift */,
+				1A3FD95321BF543F0070A21B /* PlaceOrderSliderViewController.swift */,
 				FB3017C521BCC34300C7BCF2 /* AppDelegate.swift */,
 				FB3017C721BCC34300C7BCF2 /* ViewController.swift */,
 				FB3017C921BCC34300C7BCF2 /* Main.storyboard */,
@@ -432,8 +440,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFE036E21C0CF92003CB978 /* JuiceTableViewController.swift in Sources */,
 				1AD4A12221BD026E0028309B /* LoginViewController.swift in Sources */,
 				FB3017C821BCC34300C7BCF2 /* ViewController.swift in Sources */,
+				1A3FD95621BF5D120070A21B /* MeatsTableViewController.swift in Sources */,
+				1A3FD95421BF543F0070A21B /* PlaceOrderSliderViewController.swift in Sources */,
 				FB3017C621BCC34300C7BCF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
