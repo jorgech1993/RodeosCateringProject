@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -799,6 +799,13 @@ layer.cornerRadius
                                 <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delivery Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWa-jk-Ii6">
+                                <rect key="frame" x="30" y="419" width="109" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="92000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0j8-xe-1sl">
                                 <rect key="frame" x="30" y="381" width="302" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -820,7 +827,7 @@ layer.cornerRadius
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAU-kV-saf">
-                                <rect key="frame" x="85" y="495" width="227" height="47"/>
+                                <rect key="frame" x="86" y="545" width="227" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.47058823529999999" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -833,7 +840,7 @@ layer.cornerRadius
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp0-x7-iXB">
-                                <rect key="frame" x="85" y="550" width="227" height="47"/>
+                                <rect key="frame" x="86" y="600" width="227" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.47058823529999999" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -845,6 +852,27 @@ layer.cornerRadius
                                     <segue destination="VeE-WW-oVf" kind="show" identifier="contact_info_to_juice_page" id="VYM-qt-zOe"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HIi-K5-XKa">
+                                <rect key="frame" x="30" y="440" width="302" height="97"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <date key="date" timeIntervalSinceReferenceDate="566687176.21417105">
+                                    <!--2018-12-16 21:06:16 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="536526000">
+                                    <!--2018-01-01 19:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167634800">
+                                    <!--2038-01-01 07:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.15686274510000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="TF5-xK-WB9"/>
@@ -853,6 +881,7 @@ layer.cornerRadius
                         <outlet property="address_text" destination="SHS-BD-yq2" id="0tv-Dc-Mfb"/>
                         <outlet property="back_button" destination="cp0-x7-iXB" id="hzN-gW-cLb"/>
                         <outlet property="continue_checkout_button" destination="zAU-kV-saf" id="E7k-Tu-SDo"/>
+                        <outlet property="delivery_date_picker" destination="HIi-K5-XKa" id="SHH-r9-kgb"/>
                         <outlet property="first_name_text" destination="cyC-QR-boZ" id="rL9-5m-OlT"/>
                         <outlet property="last_name_text" destination="mn9-ng-NYt" id="4V6-YY-qzp"/>
                         <outlet property="phone_text" destination="HgF-XH-ykM" id="LzE-mZ-dhP"/>
@@ -926,6 +955,7 @@ layer.cornerRadius
                         <outlet property="back_button" destination="KK0-Ng-PIj" id="10N-Bb-xyt"/>
                         <outlet property="confirm_button" destination="EP8-Zh-twU" id="3XT-gW-CGY"/>
                         <outlet property="text_view" destination="6co-YB-wyq" id="8wY-bK-4Rw"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="order_info_back_to_home_page" id="KTS-M1-EhX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubU-f0-whJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -939,13 +969,13 @@ layer.cornerRadius
         <image name="SubtractButton" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Cc3-3C-Xkw"/>
+        <segue reference="vK0-QU-ByE"/>
         <segue reference="8Y2-Qg-mRq"/>
-        <segue reference="aHD-1R-lwQ"/>
+        <segue reference="VYM-qt-zOe"/>
         <segue reference="7EZ-db-Fvv"/>
         <segue reference="ihc-w6-dzS"/>
         <segue reference="fXI-Fm-3iJ"/>
-        <segue reference="tcB-Ya-XXl"/>
+        <segue reference="KTS-M1-EhX"/>
         <segue reference="ltB-Ci-r5K"/>
     </inferredMetricsTieBreakers>
 </document>

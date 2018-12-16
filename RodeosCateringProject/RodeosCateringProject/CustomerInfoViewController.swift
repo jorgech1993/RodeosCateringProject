@@ -21,6 +21,7 @@ class CustomerInfoViewController: UIViewController
     
     @IBOutlet weak var continue_checkout_button: UIButton!
     @IBOutlet weak var back_button: UIButton!
+    @IBOutlet weak var delivery_date_picker: UIDatePicker!
     
     
     @IBAction func back_to_juice_page(_ sender: Any)
@@ -44,15 +45,21 @@ class CustomerInfoViewController: UIViewController
             let message = "One or more fields are empty. Please fill out, before continuing"
             displayAlert(a_title: title, a_message: message)
         }
-        
     }
-    
     
     override func viewDidLoad()
     {
         continue_checkout_button.layer.cornerRadius = 15
         back_button.layer.cornerRadius = 15
         self.hideKeyboardWhenTappedAround()
+        
+        delivery_date_picker.setValue(
+            UIColor.white,
+            forKeyPath: "textColor")
+        delivery_date_picker.setValue(
+            false,
+            forKey: "highlightsToday")
+        
         super.viewDidLoad()
     }
     
@@ -111,6 +118,27 @@ class CustomerInfoViewController: UIViewController
             contact_info_together.append("\n")
             contact_info_together.append("\n")
         }
+        
+        let dateFormatter = DateFormatter()
+        // Now we specify the display format, e.g. "27-08-2015
+        dateFormatter.dateFormat = "MM-dd-YYYY"
+        // Now we get the date from the UIDatePicker and convert it to a string
+        let delivery_date_chosen = dateFormatter.string(from: delivery_date_picker.date)
+        
+        contact_info_together.append("DELIVERY DATE: ")
+        contact_info_together.append("\n - ")
+        contact_info_together.append(delivery_date_chosen)
+        contact_info_together.append(" At: ")
+        
+        dateFormatter.dateFormat =  "HH:mm"
+        var delivery_time_chosen =
+            dateFormatter.string(from: delivery_date_picker.date)
+        
+        contact_info_together.append(delivery_time_chosen)
+        contact_info_together.append("\n")
+        
+
+        
         contact_info_together.append("\n")
     } // func create_contact_info_string() -> Void
     

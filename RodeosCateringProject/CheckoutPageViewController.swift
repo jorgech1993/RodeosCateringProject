@@ -242,7 +242,7 @@ class CheckoutPageViewController: UIViewController, MFMailComposeViewControllerD
             // since this is the owners email
            mail.setSubject("ORDER CONFIRMATION RODEO'S CATERING")
             mail.setToRecipients(["rodeoscatering2018@gmail.com"])
-            mail.setMessageBody("<p>" + m_information_for_body + "</p>", isHTML: true)
+            mail.setMessageBody( m_information_for_body , isHTML: false)
             self.present(mail, animated: true)
         }
         else
@@ -271,6 +271,40 @@ class CheckoutPageViewController: UIViewController, MFMailComposeViewControllerD
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
     {
+        let title   = "Confirmation Order Status"
+        var message = ""
+        switch result
+        {
+            case MFMailComposeResult.failed:
+                do
+                {
+                    message = "Your order has failed to go through via email. "
+                    message.append("\n")
+                    message.append("Please call the store: ")
+                    message.append(store_telephone_number)
+                }
+            case MFMailComposeResult.cancelled:
+                do
+                {
+                    message = "Failed to send order. Email was cancelled"
+                }
+            case MFMailComposeResult.sent:
+                do
+                {
+                    message = "Succesfully sent order. Check email for a copy."
+                    performSegue(withIdentifier: "order_info_back_to_home_page", sender: self)
+                }
+            default:
+                do
+                {
+                    message = "Order has failed to go through."
+                    message.append("\n")
+                    message.append("Please call the store: ")
+                    message.append(store_telephone_number)
+                    break
+                }
+        } //  switch result
+        self.displayAlert(a_title:title, a_message:message)
         controller.dismiss(animated: true)
     }
     
