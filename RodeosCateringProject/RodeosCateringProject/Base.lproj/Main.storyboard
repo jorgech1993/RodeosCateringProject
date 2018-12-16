@@ -970,12 +970,13 @@ layer.cornerRadius
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vK0-QU-ByE"/>
+        <segue reference="Cc3-3C-Xkw"/>
         <segue reference="8Y2-Qg-mRq"/>
         <segue reference="VYM-qt-zOe"/>
         <segue reference="7EZ-db-Fvv"/>
         <segue reference="ihc-w6-dzS"/>
         <segue reference="fXI-Fm-3iJ"/>
-        <segue reference="KTS-M1-EhX"/>
+        <segue reference="tcB-Ya-XXl"/>
         <segue reference="ltB-Ci-r5K"/>
     </inferredMetricsTieBreakers>
 </document>

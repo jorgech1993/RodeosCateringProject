@@ -46,6 +46,7 @@ class PriorRegisterViewController: UIViewController
         sign_in_button.layer.cornerRadius = 15
         cancel_button.layer.cornerRadius = 15
         should_show_full_menu = true
+        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
     }
     
