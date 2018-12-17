@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1D130F21C75D1D00721C8C /* OwnerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D130E21C75D1D00721C8C /* OwnerTableViewController.swift */; };
 		1A3FD95421BF543F0070A21B /* PlaceOrderSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FD95321BF543F0070A21B /* PlaceOrderSliderViewController.swift */; };
 		1A3FD95621BF5D120070A21B /* MeatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FD95521BF5D120070A21B /* MeatsTableViewController.swift */; };
 		1AB1425421C4B8C80035B13E /* CheckoutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1425321C4B8C80035B13E /* CheckoutPageViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A1D130E21C75D1D00721C8C /* OwnerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerTableViewController.swift; sourceTree = "<group>"; };
 		1A26673A21BDEA8E00C4AC28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A3FD95321BF543F0070A21B /* PlaceOrderSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderSliderViewController.swift; sourceTree = "<group>"; };
 		1A3FD95521BF5D120070A21B /* MeatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatsTableViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		FB3017C421BCC34300C7BCF2 /* RodeosCateringProject */ = {
 			isa = PBXGroup;
 			children = (
+				1A1D130E21C75D1D00721C8C /* OwnerTableViewController.swift */,
 				1AF27D9F21C6E661007DA56A /* RodeosCateringProject.entitlements */,
 				1AF27D9D21C6E140007DA56A /* ContactUsViewController.swift */,
 				1AF9C66821C4AA0300E0DD2D /* CustomerInfoViewController.swift */,
@@ -463,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1D130F21C75D1D00721C8C /* OwnerTableViewController.swift in Sources */,
 				1AF9C66721C476B800E0DD2D /* JuiceTableViewController.swift in Sources */,
 				1AD4A12221BD026E0028309B /* LoginViewController.swift in Sources */,
 				1AB1425421C4B8C80035B13E /* CheckoutPageViewController.swift in Sources */,

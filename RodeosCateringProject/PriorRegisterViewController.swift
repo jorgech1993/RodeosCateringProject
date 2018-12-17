@@ -10,9 +10,10 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+var we_are_owner:Bool = false
+
 class PriorRegisterViewController: UIViewController
 {
-    
     @IBOutlet weak var sign_in_button: UIButton!
     @IBOutlet weak var email_text_field: UITextField!
     @IBOutlet weak var password_text_field: UITextField!
@@ -47,6 +48,8 @@ class PriorRegisterViewController: UIViewController
         cancel_button.layer.cornerRadius = 15
         should_show_full_menu = true
         self.hideKeyboardWhenTappedAround()
+        retrieveUsersInfo()
+        we_are_owner = false
         super.viewDidLoad()
     }
     
@@ -66,6 +69,18 @@ class PriorRegisterViewController: UIViewController
                     user, error in
                     if ((error == nil) && user != nil)
                     {
+
+                        // if the owner is signing in
+                        // then we want to segue
+                        // to the owner chat page view
+                        // where it displays all user names
+                        // that are created
+                        if(user_email.lowercased() == "rodeoscatering2018@gmail.com")
+                        {
+                            we_are_owner = true
+                            self.performSegue(withIdentifier: "login_to_owner_page", sender: self)
+                        }
+                        
                         // if we are not coming from the
                         // contact us page, then we are logging in
                         // to go to the slider page
@@ -74,7 +89,7 @@ class PriorRegisterViewController: UIViewController
                         // functionalities, otherwise we are going
                         // to the contact us page, which is essentially
                         // the chat page
-                        if(!from_contact_us_page)
+                        else if(!from_contact_us_page)
                         {
                             self.performSegue(
                                 withIdentifier: "login_to_slider",
@@ -149,5 +164,22 @@ class PriorRegisterViewController: UIViewController
             sign_in_button.alpha = 0.5
             sign_in_button.isEnabled = false
         }
+    }
+    
+    func retrieveUsersInfo() -> Void
+    {
+        users.removeAll()
+        let db_ref = Database.database().reference()
+        db_ref.child("Users").queryOrderedByKey().observe(.childAdded, with:
+            {
+                snapshot in
+                
+            let user_name = (snapshot.value as? NSDictionary)?["username"] as? String ?? ""
+            let uid = (snapshot.value as? NSDictionary)?["uid"] as? String ?? ""
+                if(user_name != "rodeos_owner")
+                {
+                    users.append(User(user_name: user_name, user_id: uid))
+                }
+        })
     }
 }

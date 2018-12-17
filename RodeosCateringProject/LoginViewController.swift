@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+
 
 class LoginViewController: UIViewController
 {
@@ -110,6 +112,18 @@ class LoginViewController: UIViewController
                     self.performSegue(
                         withIdentifier: "register_to_contact_page",
                         sender: self)
+                }
+                
+                if let uid = Auth.auth().currentUser?.uid
+                {
+                    let db_ref = Database.database().reference()
+                    let user_data: [String:Any] =
+                    [
+                        "email": email,
+                        "uid": uid,
+                        "username": username
+                    ]
+                    db_ref.child("Users").child(uid).setValue(user_data)
                 }
             }
             else

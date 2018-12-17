@@ -240,7 +240,7 @@ class CheckoutPageViewController: UIViewController, MFMailComposeViewControllerD
             // the set to receipient
             // is always this email
             // since this is the owners email
-           mail.setSubject("ORDER CONFIRMATION RODEO'S CATERING")
+            mail.setSubject("ORDER CONFIRMATION RODEO'S CATERING")
             mail.setToRecipients(["rodeoscatering2018@gmail.com"])
             mail.setMessageBody( m_information_for_body , isHTML: false)
             self.present(mail, animated: true)
@@ -269,54 +269,78 @@ class CheckoutPageViewController: UIViewController, MFMailComposeViewControllerD
         }
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
+    func mailComposeController(_ controller:MFMailComposeViewController, didFinishWith result:MFMailComposeResult, error:Error?)
     {
         let title   = "Confirmation Order Status"
         var message = ""
         switch result
         {
-            case MFMailComposeResult.failed:
-                do
-                {
-                    message = "Your order has failed to go through via email. "
-                    message.append("\n")
-                    message.append("Please call the store: ")
-                    message.append(store_telephone_number)
-                }
-            case MFMailComposeResult.cancelled:
-                do
-                {
-                    message = "Failed to send order. Email was cancelled"
-                }
-            case MFMailComposeResult.sent:
-                do
-                {
-                    message = "Succesfully sent order. Check email for a copy."
-                    performSegue(withIdentifier: "order_info_back_to_home_page", sender: self)
-                }
-            default:
-                do
-                {
-                    message = "Order has failed to go through."
-                    message.append("\n")
-                    message.append("Please call the store: ")
-                    message.append(store_telephone_number)
-                    break
-                }
+        case .failed:
+            do
+            {
+                message = "Your order has failed to go through via email. "
+                message.append("\n")
+                message.append("Please call the store: ")
+                message.append(store_telephone_number)
+            }
+        case .cancelled:
+            do
+            {
+                message = "Failed to send order. Email was cancelled"
+            }
+        case .sent:
+            do
+            {
+                controller.dismiss(animated: true, completion: go_back_home)
+            }
+        case .saved:
+            do
+            {
+               message = "Email was saved as draft. Was not sent. Please Send again"
+            }
+            
+        default:
+            do
+            {
+                message = "Order has failed to go through."
+                message.append("\n")
+                message.append("Please call the store: ")
+                message.append(store_telephone_number)
+                break
+            }
         } //  switch result
-        self.displayAlert(a_title:title, a_message:message)
+        
         controller.dismiss(animated: true)
+        self.displayAlert(a_title:title, a_message:message)
     }
     
     func displayAlert(a_title:String, a_message:String) -> Void
     {
-        
         let alert = UIAlertController(
             title: a_title,
             message: a_message,
             preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func go_back_home() -> Void
+    {
+        let title   = "Confirmation Order Status"
+        let message = "Message was sent. Check email for a copy"
+        
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title:"OK", style: .default, handler:
+        {
+            action in self.performSegue(withIdentifier: "order_info_back_to_home_page", sender: self)
+            
+        }))
         
         self.present(alert, animated: true)
     }
