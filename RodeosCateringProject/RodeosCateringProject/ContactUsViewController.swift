@@ -86,6 +86,7 @@ class ContactUsViewController: UIViewController,
                 }
             }
         }
+        user_entered_message_text_field.text?.removeAll()
     }
     
     override func viewDidLoad()
@@ -137,8 +138,6 @@ class ContactUsViewController: UIViewController,
         // where we are writing to for the whole chat
         if(we_are_owner)
         {
-            print("user clicked on id" )
-            //print(persons_clicked_on_uid)
             db_ref.child("Posts").child("/\(persons_clicked_on_uid)/").queryOrderedByKey().observe(.childAdded, with:
                 
             {
@@ -167,7 +166,6 @@ class ContactUsViewController: UIViewController,
         }
         else
         {
-            print("/\(Auth.auth().currentUser?.uid)/")
             db_ref.child("Posts").child("/\(Auth.auth().currentUser?.uid)/").queryOrderedByKey().observe(.childAdded, with:
                 
                 {
